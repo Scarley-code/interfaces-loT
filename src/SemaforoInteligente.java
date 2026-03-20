@@ -1,4 +1,4 @@
-public class SemaforoInteligente extends DispositivoloT implements Mantenible, ControlableRemotamente{
+public class SemaforoInteligente extends DispositivoIoT implements Mantenible, ControlableRemotamente{
     private String estadoActual;
 
     public SemaforoInteligente(String id, String ubicacion, boolean encendido, String estadoActual) {
@@ -16,17 +16,18 @@ public class SemaforoInteligente extends DispositivoloT implements Mantenible, C
 
     @Override
     public void procesarDatos() {
-
+        System.out.println("El semáforo está en " + getUbicacion() + " y está en " + estadoActual);
     }
 
     @Override
-    public boolean concectarWifi() {
-        return false;
+    public boolean conectarWifi() {
+        System.out.println("Semáforo conectado a la red WiFi");
+        return true;
     }
 
     @Override
     public void reiniciarDispositivo() {
-
+        System.out.println("Semáforo reiniciado");
     }
 
     @Override
@@ -36,6 +37,6 @@ public class SemaforoInteligente extends DispositivoloT implements Mantenible, C
 
     @Override
     public void realizarMantenimiento() {
-
+        System.out.println("Mantenimiento del semáforo realizado");
     }
 }

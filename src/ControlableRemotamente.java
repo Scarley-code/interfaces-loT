@@ -1,4 +1,4 @@
 public interface ControlableRemotamente {
-    boolean concectarWifi();
+    boolean conectarWifi();
     void reiniciarDispositivo();
 }

@@ -1,12 +1,12 @@
-public abstract class DispositivoloT {
+public abstract class DispositivoIoT {
     private String id;
     private String ubicacion;
     private boolean encendido;
 
-    public DispositivoloT(String id, String ubicacion, boolean encendido) {
+    public DispositivoIoT(String id, String ubicacion, boolean encendido) {
         this.id = id;
         this.ubicacion = ubicacion;
-        this.encendido = false;
+        this.encendido = encendido;
     }
 
     public String getId() {

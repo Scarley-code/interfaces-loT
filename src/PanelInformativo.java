@@ -1,4 +1,4 @@
-public class PanelInformativo extends DispositivoloT implements ControlableRemotamente{
+public class PanelInformativo extends DispositivoIoT implements ControlableRemotamente{
     private String textoMostrado;
 
     public PanelInformativo(String id, String ubicacion, boolean encendido, String textoMostrado) {
@@ -16,16 +16,17 @@ public class PanelInformativo extends DispositivoloT implements ControlableRemot
 
     @Override
     public void procesarDatos() {
-
+        System.out.println("Panel en " + getUbicacion() + ": " + textoMostrado);
     }
 
     @Override
-    public boolean concectarWifi() {
-        return false;
+    public boolean conectarWifi() {
+        System.out.println("Panel conectado a la red WiFi");
+        return true;
     }
 
     @Override
     public void reiniciarDispositivo() {
-
+        System.out.println("Panel reiniciado");
     }
 }

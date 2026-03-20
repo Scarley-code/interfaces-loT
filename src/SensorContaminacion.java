@@ -1,4 +1,4 @@
-public class SensorContaminacion extends DispositivoloT implements Mantenible{
+public class SensorContaminacion extends DispositivoIoT implements Mantenible{
     private double nivelCO2;
 
     public SensorContaminacion(String id, String ubicacion, boolean encendido, double nivelCO2) {
@@ -16,7 +16,7 @@ public class SensorContaminacion extends DispositivoloT implements Mantenible{
 
     @Override
     public void procesarDatos() {
-
+        System.out.println("Sensor en " + getUbicacion() + " mide CO2: " + nivelCO2);
     }
 
     @Override
@@ -26,6 +26,6 @@ public class SensorContaminacion extends DispositivoloT implements Mantenible{
 
     @Override
     public void realizarMantenimiento() {
-
+        System.out.println("Mantenimiento del sensor realizado");
     }
 }
